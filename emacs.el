@@ -7,6 +7,7 @@
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
 (add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
 (setq coffee-tab-width 4)
+(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
 (setq js-indent-level 2)
 
 (add-to-list 'load-path "~/.emacs.d/jade-mode")
@@ -17,9 +18,12 @@
 
 (tool-bar-mode -1)
 
+(setq make-backup-files nil)
+(setq auto-save-file-name-transforms
+      `((".*", temporary-file-directory t)))
+
 (setq-default indent-tabs-mode nil)
 (setq column-number-mode 1)
-(setq make-backup-files nil)
 (require 'color-theme)
 (eval-after-load "color-theme"
   '(progn
