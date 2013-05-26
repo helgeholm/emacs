@@ -10,6 +10,10 @@
 (add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
 (setq js-indent-level 2)
 
+(add-to-list 'load-path "~/.emacs.d/pig-mode")
+(require 'pig-mode)
+(add-to-list 'auto-mode-alist '("\\.pig$" . pig-mode))
+
 (add-to-list 'load-path "~/.emacs.d/jade-mode")
 (require 'sws-mode)
 (require 'jade-mode)    
