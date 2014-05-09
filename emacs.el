@@ -20,6 +20,10 @@
 (add-to-list 'auto-mode-alist '("\\.styl$" . sws-mode))
 (add-to-list 'auto-mode-alist '("\\.jade$" . jade-mode))
 
+(add-to-list 'load-path "~/.emacs.d/rust-mode")
+(autoload 'rust-mode "rust-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
+
 (tool-bar-mode -1)
 
 (setq make-backup-files nil)
