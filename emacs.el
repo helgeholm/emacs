@@ -35,7 +35,7 @@
 (setq-default indent-tabs-mode nil)
 (setq column-number-mode 1)
 
-;; sudo apt-get install emacs-goodies-el
+(add-to-list 'load-path "~/.emacs.d/emacs-goodies-el")
 (require 'color-theme)
 (eval-after-load "color-theme"
   '(progn
